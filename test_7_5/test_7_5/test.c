@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ï»¿#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <string.h>
@@ -180,6 +181,25 @@ int main()
 	sum = add(num1, num2);
 	// è¾“å‡º
 	printf("%d\n", sum);
+=======
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+// ×Ö·û´®  ×ªÒå×Ö·û ×¢ÊÍ
+
+int main()
+{
+	// CÓïÑÔÖÐÃ»ÓÐ×Ö·û´®ÀàÐÍ
+	//"abcdef";  // ×Ö·û´®×ÖÃæÖµ
+	char arr1[] = "abcdef";
+	char arr2[] = {'a', 'b', 'c', 'd', 'e', 'f'};
+	//char arr2[] = { 'a', 'b', 'c', 'd', 'e', 'f', '\0'};
+	/*printf("%s\n", arr1);
+	printf("%s\n", arr2);*/
+
+	printf("%d\n", strlen(arr1));
+	printf("%d\n", strlen(arr2));
+>>>>>>> db6a2cea7e6eae2a89bad5dc58bcb5cf7645eabd
 
 	return 0;
 }
