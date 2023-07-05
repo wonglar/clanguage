@@ -1,4 +1,3 @@
-
 ﻿#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <string.h>
@@ -165,22 +164,45 @@
 // 封装一个函数来进行求和
 
 // 求和的函数
-int add(int x, int y)
-{
-	return x + y;
-}
+//int add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//int main()
+//{
+//	int num1 = 0;
+//	int num2 = 0;
+//	int sum = 0;
+//	// 输入
+//	scanf("%d %d", &num1, &num2);
+//	// 求和
+//	sum = add(num1, num2);
+//	// 输出
+//	printf("%d\n", sum);
+//
+//	return 0;
+//}
 
-int main()
-{
-	int num1 = 0;
-	int num2 = 0;
-	int sum = 0;
-	// 输入
-	scanf("%d %d", &num1, &num2);
-	// 求和
-	sum = add(num1, num2);
-	// 输出
-	printf("%d\n", sum);
 
-	return 0;
-}
+
+// 数组
+
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,0 };
+//	printf("%d\n", arr[3]);  // 数组的访问通过下标，数组的下标是从0开始的
+//	
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		printf("%d ", arr[i]);
+//		i++;
+//	}
+//
+//
+//	return 0;
+//}
+
+
+
