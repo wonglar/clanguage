@@ -141,3 +141,93 @@
 //	printf("sum = %d\n", sum);
 //	return 0;
 //}
+
+
+// typedef 类型重命名
+//typedef unsigned int u_int;
+// 
+// 
+// 
+//
+//typedef struct Node
+//{
+//	int data;
+//	struct Node* next;
+//}Node;
+//
+//int main()
+//{
+//	unsigned int num1 = 10;
+//	u_int num2 = 20;
+//
+//	struct Node n1;
+//	Node n2;
+//	return 0;
+//}
+
+
+// static 关键字
+// 1.修饰局部变量 2.修饰全局变量 3.修饰函数
+//void test()
+//{
+//	int a = 1;
+//	a++;
+//	printf("%d ", a);
+//}
+//
+//int main()
+//{
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		test();
+//		i++;
+//	}
+//
+//	return 0;
+//}
+
+
+//void test()
+//{
+//	// static 修饰局部变量的时候，局部变量出了作用域，不销毁，本质上，static修饰局部变量，改变了变量的存储位置，影响了变量的生命周期，生命周期变长，和程序的生命周期一样。
+//	static int a = 1;
+//	a++;
+//	printf("%d ", a);
+//}
+//
+//int main()
+//{
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		test();
+//		i++;
+//	}
+//
+//	return 0;
+//}
+
+
+
+// static修饰全局变量
+// static 修饰全局变量的时候这个全局变量的外部链接属性就变成了内部链接属性，其他源文件就不能使用到这个全局变量了
+// 声明外部符号
+//extern int g_val;
+//
+////int a = 200;
+//static int a = 200;
+//
+//int main()
+//{
+//	printf("a = %d\n", a);
+//	//printf("%d\n", g_val);
+//	return 0;
+//}
+
+// static 修饰函数
+int main()
+{
+
+	return 0;
+}
