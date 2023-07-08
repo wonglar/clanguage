@@ -226,8 +226,22 @@
 //}
 
 // static 修饰函数
-int main()
-{
 
-	return 0;
-}
+//extern int add(int x, int y);
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int z = add(a, b);
+//	printf("%d\n", z);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	// 寄存器变量
+//	register int num = 10; // 建议放到寄存器中
+//	return 0;
+//}
