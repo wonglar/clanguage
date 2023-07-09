@@ -271,6 +271,60 @@ switch(常量表达式)
 //}
 
 // while循环中
-// break是用于永久的终止训话
+// break是用于永久的终止循环
 // continue跳过本次循环后面的代码，直接去判断部分，进行下一次循环的判断
+
+
+
+
+
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		putchar(ch);
+//	}
+//
+//	return 0;
+//}
+
+
+// 举一个例子
+//int main()
+//{
+//	char password[20] = { 0 };
+//	printf("请输入密码：>");
+//	scanf("%s", &password);
+//	getchar();  // 读取掉缓冲区的\n
+//	printf("请确认密码（Y/N）：>");
+//	int ret = getchar();
+//	if ('Y' == ret)
+//		printf("Yes\n");
+//	else
+//		printf("No\n");
+//	return 0;
+//
+//}
+
+
+//int main()
+//{
+//	char password[20] = { 0 };
+//	printf("请输入密码：>");
+//	scanf("%s", &password);
+//
+//  // 循环读取掉缓冲区
+//	int ch = 0;
+//	while ((ch = getchar()) != '\n');
+//
+//	printf("请确认密码（Y/N）：>");
+//	int ret = getchar();
+//	if ('Y' == ret)
+//		printf("Yes\n");
+//	else
+//		printf("No\n");
+//	return 0;
+//
+//}
 
