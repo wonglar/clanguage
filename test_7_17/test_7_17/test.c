@@ -183,10 +183,65 @@
 
 
 // 求10个整数中的最大值
+//int main()
+//{
+//	int arr[10] = { -1,-2,-3,-4,-5,-6,-7,-8,-9,-10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int max = arr[0];
+//	int i = 0;
+//	for (i = 1; i < sz; i++)
+//	{
+//		if (arr[i] > max)
+//		{
+//			max = arr[i];
+//		}
+//	}
+//
+//	printf("max = %d\n", max);
+//
+//	return 0;
+//}
+
 
 
 // 打印九九乘法表
-
+//int main()
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 1; i <= 9; i++)
+//	{
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d*%d=%-2d ", j, i, j * i);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
 
 // 实现一个函数，打印乘法口诀表，口诀表的行数和列数自己指定
+//void print_table(int n)
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 1; i <= n; i++)
+//	{
+//		for (j = 1; j <= i; j++)
+//		{
+//			printf("%d*%d=%-2d ", j, i, j * i);
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	print_table(n);
+//
+//	return 0;
+//}
 
+
+// 数组在内存中是连续存放的
