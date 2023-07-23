@@ -77,10 +77,9 @@ void PlayerMove(char board[ROW][COL], int row, int col)
 // 电脑下棋
 void ComputerMove(char board[ROW][COL], int row, int col)
 {
-
+	printf("电脑下棋：>\n");
 	while (1)
 	{
-		printf("电脑下棋：>\n");
 		int x = rand() % row;
 		int y = rand() % col;
 
