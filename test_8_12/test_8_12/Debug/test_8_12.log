@@ -1,0 +1,4 @@
+﻿  test.c
+F:\code\clanguage\test_8_12\test_8_12\test.c(248,16): warning C4566: 由通用字符名称“\u00C2”表示的字符不能在当前代码页(936)中表示出来
+F:\code\clanguage\test_8_12\test_8_12\test.c(249,16): warning C4566: 由通用字符名称“\u00C4”表示的字符不能在当前代码页(936)中表示出来
+  test_8_12.vcxproj -> F:\code\clanguage\test_8_12\Debug\test_8_12.exe
