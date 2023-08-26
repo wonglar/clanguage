@@ -43,13 +43,16 @@ int main()
 			DelContact(&con);
 			break;
 		case SEARCH:
+			SearchContact(&con);
 			break;
 		case MODIFY:
+			ModifyContact(&con);
 			break;
 		case SHOW:
 			PrintContact(&con);
 			break;
 		case SORT:
+			SortContact(&con);
 			break;
 		case EXIT:
 			printf("退出通讯录\n");
