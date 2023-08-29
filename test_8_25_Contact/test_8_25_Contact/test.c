@@ -23,6 +23,13 @@ void menu()
 	printf("********************************\n");
 }
 
+void DestroyContact(Contact* pc)
+{
+	assert(pc);
+	free(pc->data);
+	pc->data = NULL;
+}
+
 int main()
 {
 	int input = 0;
@@ -55,6 +62,7 @@ int main()
 			SortContact(&con);
 			break;
 		case EXIT:
+			DestroyContact(&con);
 			printf("退出通讯录\n");
 			break;
 		default:

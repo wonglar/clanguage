@@ -3,23 +3,84 @@
 #include "contact.h"
 
 
+//// 初始化通讯录
+//void InitContact(Contact* pc)
+//{
+//	memset(pc->data, 0, sizeof(pc->data));
+//	pc->sz = 0;
+//}
+
+
+// 动态版本通讯录
 // 初始化通讯录
 void InitContact(Contact* pc)
 {
-	memset(pc->data, 0, sizeof(pc->data));
 	pc->sz = 0;
+	pc->data = (PeoInfo*)calloc(DEFAULT_SZ, sizeof(PeoInfo));
+	if (pc->data == NULL)
+	{
+		perror("InitContact 内存开辟失败");
+		return;
+	}
+
+	pc->capacity = DEFAULT_SZ;
 }
 
 
+//// 添加人的信息
+//void AddContact(Contact* pc)
+//{
+//	assert(pc);
+//	if (pc->sz == sizeof(pc->data))
+//	{
+//		printf("通讯录已满!\n");
+//		return;
+//	}
+//	// 增加一个人的信息
+//	printf("请输入名字:>");
+//	scanf("%s", pc->data[pc->sz].name);
+//	printf("请输入性别:>");
+//	scanf("%s", pc->data[pc->sz].sex);
+//	printf("请输入年龄:>");
+//	scanf("%d", &(pc->data[pc->sz].age));
+//	printf("请输入电话:>");
+//	scanf("%s", pc->data[pc->sz].tele);
+//	printf("请输入地址:>");
+//	scanf("%s", pc->data[pc->sz].addr);
+//
+//	pc->sz++;
+//	printf("增加成功!\n");
+//
+//}
+
+
+void CheckCapacity(Contact* pc)
+{
+	if (pc->sz == pc->capacity)
+	{
+		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (INC_SZ + pc->capacity) * sizeof(PeoInfo));
+		if (ptr == NULL)
+		{
+			perror("CheckCapacity");
+		}
+		else
+		{
+			pc->data = ptr;
+			pc->capacity += INC_SZ;
+			printf("增容成功!\n");
+		}
+	}
+}
+
+// 动态版本通讯录
 // 添加人的信息
 void AddContact(Contact* pc)
 {
 	assert(pc);
-	if (pc->sz == sizeof(pc->data))
-	{
-		printf("通讯录已满!\n");
-		return;
-	}
+	// 增容
+	CheckCapacity(pc);
+
+
 	// 增加一个人的信息
 	printf("请输入名字:>");
 	scanf("%s", pc->data[pc->sz].name);
@@ -106,7 +167,7 @@ void DelContact(Contact* pc)
 void SearchContact(Contact* pc)
 {
 	assert(pc);
-	char name[MAX_NAME] = {0};
+	char name[MAX_NAME] = { 0 };
 	printf("请输入要查找人的姓名:>");
 	scanf("%s", name);
 
@@ -133,7 +194,7 @@ void ModifyContact(Contact* pc)
 	assert(pc);
 	char name[MAX_NAME] = { 0 };
 	printf("请输入要修改的人的姓名:>");
-	scanf("%s", name); 
+	scanf("%s", name);
 
 	// 先查找
 	int pos = FindByName(pc, name);
@@ -159,7 +220,7 @@ void ModifyContact(Contact* pc)
 
 }
 
-int cmp_by_name(const void* e1, const void * e2)
+int cmp_by_name(const void* e1, const void* e2)
 {
 	return strcmp(((PeoInfo*)e1)->name, ((PeoInfo*)e2)->name);
 }
